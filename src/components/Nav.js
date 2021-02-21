@@ -8,7 +8,7 @@ const Nav = () => {
       <ul>
         <li><Link to="/">About Us</Link></li>
         <li><Link to="work">Our Work</Link></li>
-        <li><Link to="contact">Contac Us</Link></li>
+        <li><Link to="contact">Contact Us</Link></li>
       </ul>
     </StyledNav>
    );

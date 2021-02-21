@@ -1,5 +1,9 @@
 import home1 from "../img/home1.png"
-import styled from "styled-components";
+import Wave from "../components/Wave";
+
+import { motion } from "framer-motion";
+import { titleAnimation, fade, photoAnimation } from "../animation";
+
 import { Layout, Description, Image, Hide } from "../styles";
 
 
@@ -7,23 +11,24 @@ const AboutSection = () => {
 	return ( 
     <Layout>
       <Description>
-        <div className="title">
+        <motion.div className="title" >
 					<Hide>
-						<h2>We work to make</h2>
+						<motion.h2 variants={titleAnimation} >We work to make</motion.h2>
 					</Hide>
 					<Hide>
-						<h2>your <span>dreams</span> come</h2>
+						<motion.h2 variants={titleAnimation}>your <span>dreams</span> come</motion.h2>
 					</Hide>
 					<Hide>
-						<h2>true.</h2>
+						<motion.h2 variants={titleAnimation}>true.</motion.h2>
 					</Hide>
-        </div>
-				<p>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills.</p>
-				<button>Contact Us</button>
+        </motion.div>
+				<motion.p variants={fade}>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills.</motion.p>
+				<motion.button variants={fade}>Contact Us</motion.button>
       </Description>
 			<Image>
-				<img src={home1} alt="cameraman"/>
+				<motion.img src={home1} alt="cameraman" variants={photoAnimation}/>
 			</Image>
+			<Wave/>
     </Layout>
   );
 }
