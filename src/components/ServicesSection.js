@@ -1,4 +1,5 @@
 import home2 from "../img/home2.png"
+import home4 from "../img/home4.jpg"
 
 import clock from "../img/clock.svg"
 import diaphragm from "../img/diaphragm.svg"
@@ -9,47 +10,49 @@ import { Layout, Description, Image } from "../styles";
 import styled from "styled-components";
 
 import useScroll from "./useScroll";
-import {scrollReveal} from  "../animation";
+import {scrollReveal, fade} from  "../animation";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return ( 
     <Services variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
       <Description>
-        <h2>High <span>quality</span> services</h2>
+        <h2>Muebles para todo el hogar</h2>
         <Cards>
           <Card>
             <div className="icon">
-              <img src={clock} alt="icon"/>
-              <h3>Efficient</h3>
+              
+              <h3>Cocinas</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img src={teamwork} alt="icon"/>
-              <h3>Teamwork</h3>
+              
+              <h3>Rack TV</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img src={diaphragm} alt="icon"/>
-              <h3>Diaphragm</h3>
+              
+              <h3>Placares</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img src={money} alt="icon"/>
-              <h3>Affordable</h3>
+              
+              <h3>Escritorios</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
         </Cards>
+        <motion.button variants={fade}>Ver Más</motion.button>
       </Description>
       <Image>
-        <img src={home2} alt="camera"/>
+        <img src={home4} alt="cocina"/>
       </Image>
     </Services>
    );

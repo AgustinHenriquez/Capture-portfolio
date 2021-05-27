@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return ( 
     <StyledNav>
-      <h1><a id="logo" href="/">Capture</a></h1>
+      <h1><a id="logo" href="/">Urriche Amoblamientos</a></h1>
       <ul>
-        <li><Link to="/">About Us</Link></li>
-        <li><Link to="work">Our Work</Link></li>
-        <li><Link to="contact">Contact Us</Link></li>
+        <li><Link to="/">Empresa</Link></li>
+        <li><Link to="productos">Productos</Link></li>
+        <li><Link to="contacto">Contacto</Link></li>
       </ul>
     </StyledNav>
    );
@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background-color: #282828;
+  background-color: #09395A;
   a{
     color: white;
     text-decoration: none;
@@ -32,8 +32,8 @@ ul{
 }
 #logo{
   font-size: 1.5rem;
-  font-family: "Lobster", cursive;
-  font-weight: lighter;
+  
+  font-weight: bold;
 }
 li{
   padding-left: 10rem;

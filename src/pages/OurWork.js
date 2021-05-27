@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import athlete from "../img/athlete-small.png";
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+import placares from "../img/placares.png";
+import cocinas from "../img/cocinas.png";
+import vanitory from "../img/vanitory.png";
 
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnimation, lineAnimation, slider, sliderContainer } from "../animation";
@@ -12,39 +12,30 @@ import useScroll from "../components/useScroll"
 
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit" style={{background:"#fff",}}>
-      <motion.div variants={sliderContainer}>
-        <Frame1 variants={slider}/>
-        <Frame2 variants={slider}/>
-        <Frame3 variants={slider}/>
-        <Frame4 variants={slider}/>  
-      </motion.div>  
-      <Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+      <Product>
+        <motion.h2 variants={fade}>Cocinas</motion.h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
-        <Link to="/work/the-athlete">
           <Hide>
-            <motion.img variants={photoAnimation} src={athlete} alt="athlete"/>
+            <motion.img variants={photoAnimation} src={cocinas} alt="cocinas"/>
           </Hide>
-        </Link>
-      </Movie>
-      <Movie variants={fade} ref={element} animate={controls} initial="hidden">
-        <h2>The Racer</h2>
+
+      </Product>
+      <Product>
+        <h2>Placares</h2>
         <div className="line"></div>
         <Link to="/work/the-racer">
-          <img src={theracer} alt="theracer"/>
+          <img src={placares} alt="theracer"/>
         </Link>
-      </Movie>
-      <Movie variants={fade} ref={element2} animate={controls2} initial="hidden">
-        <h2>Good Times</h2>
+      </Product>
+      <Product>
+        <h2>Vanitory</h2>
         <div className="line"></div>
         <Link tp="/work/good-times">
-          <img src={goodtimes} alt="goodtimes"/>
+          <img src={vanitory} alt="goodtimes"/>
         </Link>
-      </Movie>
+      </Product>
     </Work>
    );
 }
@@ -57,11 +48,11 @@ const Work = styled(motion.div)`
     padding: 1rem 0rem;
   }
 `
-const Movie = styled(motion.div)`
+const Product = styled(motion.div)`
   padding-bottom: 10rem;
   .line{
     height: 0.5rem;
-    background: #23d997;
+    background: #09395A;
     margin-bottom: 3rem;
   }
   img{
